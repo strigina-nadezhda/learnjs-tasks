@@ -8,6 +8,12 @@
 
 let styles = ["Джаз", "Блюз"];
 styles.push("Рок-н-ролл");
-styles[Math.floor((styles.length - 1) / 2)] = "Классика";
+
+function changeCentreElem(arr) {
+  let centre = Math.floor(arr.length / 2);
+  arr.splice(centre, 1, "Классика");
+}
+changeCentreElem(styles);
+
 alert(styles.shift());
 styles.unshift("Рэп", "Регги");
